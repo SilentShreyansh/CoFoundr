@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(npm install *)",
+      "PowerShell(npx tsc --noEmit -p tsconfig.json; if \\($?\\) { \"TYPECHECK: PASS\" } else { \"TYPECHECK: FAIL\" })",
+      "PowerShell(npm run *)",
+      "PowerShell(node scripts/gen-remaining-doc.mjs; if \\(Test-Path \"D:\\\\Pratice\\\\CoFoundr-Remaining-Work.docx\"\\) { \"OK size: \" + \\(Get-Item 'D:\\\\Pratice\\\\CoFoundr-Remaining-Work.docx'\\).Length + \" bytes\" })",
+      "PowerShell(node scripts/gen-run-doc.mjs; if \\(Test-Path \"D:\\\\Pratice\\\\CoFoundr-How-To-Run.docx\"\\) { \"OK size: \" + \\(Get-Item 'D:\\\\Pratice\\\\CoFoundr-How-To-Run.docx'\\).Length + \" bytes\" })",
+      "PowerShell(npm test *)",
+      "PowerShell(node scripts/gen-remaining-doc.mjs; if \\(Test-Path \"D:\\\\Pratice\\\\CoFoundr-Remaining-Work.docx\"\\) { \"OK size: \" + \\(Get-Item 'D:\\\\Pratice\\\\CoFoundr-Remaining-Work.docx'\\).Length + \" bytes, modified \" + \\(Get-Item 'D:\\\\Pratice\\\\CoFoundr-Remaining-Work.docx'\\).LastWriteTime })"
+    ]
+  }
+}
